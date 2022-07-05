@@ -1,0 +1,15 @@
+:host {
+  display: inline-block;
+}
+@media (min-width: 576px) {
+  :host {
+    min-height: calc(100% - 3.5rem);
+  }
+}
+
+@media (min-width: 576px) {
+  :host {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+}

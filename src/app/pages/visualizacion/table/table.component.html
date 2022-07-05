@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="search-form">
+      <div class="form-group">
+        <input type="search" nbInput #search />
+        <button
+          class="ml-3"
+          type="submit"
+          nbButton
+          status="info"
+          (click)="onSearch(search.value)"
+        >
+          Buscar <i class="fa fa-search ml-1"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <sort-table [columns]="columns" (onSort)="sort($event)">
+      <tr class="table-row" *ngFor="let branch of branches; let i = index">
+        <td class="nb-tree-grid-cell">{{ branch.name }}</td>
+        <td class="nb-tree-grid-cell">{{ branch.email }}</td>
+        <td class="nb-tree-grid-cell">{{ branch.phone }}</td>
+        <td class="nb-tree-grid-cell">{{ branch.city }}</td>
+        <td
+          class="nb-tree-grid-cell text-align-right"
+          style="text-align: center"
+        >
+          <button nbButton ghost status="info" (click)="edit(branch.id)">
+            <i class="fa fa-edit"></i>
+          </button>
+
+          <button nbButton ghost status="danger" (click)="remove(branch.id, i)">
+            <i class="fa fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </sort-table>
+  </div>
+</div>
+<div class="row pt-3">
+  <pagination
+    class="col-md-12"
+    [pagination]="pagination"
+    (changePage)="changePage($event)"
+  >
+  </pagination>
+</div>

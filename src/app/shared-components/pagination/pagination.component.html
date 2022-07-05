@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-6">
+        <p>Mostrando registros del <strong>{{pagination?.labels?.from}}</strong> -
+            <strong>{{pagination?.labels?.to}}</strong> de
+            un total de <strong>{{pagination?.totalItems}}</strong></p>
+    </div>
+    <div class="col-md-6 text-center">
+        <nav>
+            <ul class="pagination pagination-gutter justify-content-end">
+                <li class="page-item  {{pagination?.currentPage === 1 ? 'disabled' : ''}}">
+                    <button (click)="onChangePage(1)" class="page-link" href="javascript:void()">
+                        <i class="la la-angle-left"></i> Primero</button>
+                </li>
+                <li *ngFor="let page of pagination?.links"
+                    class="page-item {{page == pagination?.currentPage ? 'active': ''}}">
+                    <button (click)="onChangePage(page)" class="page-link" href="javascript:void()">{{page}}</button>
+                <li class="page-item {{pagination?.currentPage === pagination?.totalPages ? 'disabled' : ''}}">
+                    <button (click)="onChangePage(pagination?.totalPages)" class="page-link" href="javascript:void()">
+                        Último<i class="la la-angle-right"></i></button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
