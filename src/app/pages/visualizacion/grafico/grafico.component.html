@@ -1,10 +1,37 @@
+<div class="form-group">
+  <input type="search" nbInput #search />
+  <button class="ml-3" type="submit" nbButton status="info">
+    Buscar <i class="fa fa-search ml-1"></i>
+  </button>
+</div>
 <div class="card-row">
   <div class="card-col">
-    <nb-card size="medium">
+    <nb-card size="small">
       <nb-card-header>Sensor #</nb-card-header>
       <nb-card-body></nb-card-body>
       <nb-card-footer>
-        <button nbButton (click)="open()" fullWidth status="primary" size="small">Ver</button>
+        <button nbButton fullWidth status="primary" class="mb-1">Ver</button>
+        <button nbButton fullWidth status="info">Alarmas</button>
+      </nb-card-footer>
+    </nb-card>
+  </div>
+  <div class="card-col">
+    <nb-card size="small">
+      <nb-card-header>Sensor #</nb-card-header>
+      <nb-card-body></nb-card-body>
+      <nb-card-footer>
+        <button nbButton fullWidth status="primary" class="mb-1">Ver</button>
+        <button nbButton fullWidth status="info">Alarmas</button>
+      </nb-card-footer>
+    </nb-card>
+  </div>
+  <div class="card-col">
+    <nb-card size="small">
+      <nb-card-header>Sensor #</nb-card-header>
+      <nb-card-body></nb-card-body>
+      <nb-card-footer>
+        <button nbButton fullWidth status="primary" class="mb-1">Ver</button>
+        <button nbButton fullWidth status="info">Alarmas</button>
       </nb-card-footer>
     </nb-card>
   </div>

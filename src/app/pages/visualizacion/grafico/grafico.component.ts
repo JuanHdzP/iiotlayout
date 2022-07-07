@@ -1,20 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'ngx-grafico',
-  templateUrl: './grafico.component.html',
-  styleUrls:['./grafico.component.css'],
+  selector: "ngx-grafico",
+  templateUrl: "./grafico.component.html",
+  styleUrls: ["./grafico.component.css"],
 })
 export class GraficoComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  open(){
-    
-  }
-
+  ngOnInit(): void {}
 }
